@@ -18,7 +18,7 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="147dp"
+            android:layout_height="130dp"
             android:background="@color/colorPrimary"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent"
@@ -33,10 +33,10 @@
 
                 <Button
                     android:id="@+id/btn_logout1"
-                    android:layout_width="40dp"
+                    android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:background="@drawable/style_logout_semicircle"
-                    android:text="L"
+                    android:text="Logout"
                     android:textColor="@color/text_w" />
 
             </LinearLayout>
@@ -55,17 +55,17 @@
                     android:text="DVE by CTN Phrae"
                     android:textAlignment="viewEnd"
                     android:textColor="#FFF"
-                    android:textSize="30sp" />
+                    android:textSize="20sp" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="ครูฝึกสถานประกอบการ"
                     android:textAlignment="viewEnd"
                     android:textColor="#FFF"
-                    android:textSize="20sp" />
+                    android:textSize="19sp" />
             </LinearLayout>
 
 

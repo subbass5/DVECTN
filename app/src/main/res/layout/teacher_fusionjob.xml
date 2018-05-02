@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/text_w">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
@@ -18,10 +20,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DEV by CTN Phrae"
+            android:text="DVE by CTN Phrae"
+            android:layout_marginTop="25dp"
             android:textAlignment="center"
+            android:gravity="center"
             android:textColor="#FFF"
-            android:textSize="24sp" />
+            android:textSize="21sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -29,26 +33,60 @@
             android:layout_marginTop="20dp"
             android:text="ครูประสานการฝึกงาน"
             android:textAlignment="center"
+            android:gravity="center"
             android:textColor="#FFF"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
+
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
 
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/LV_thnaja_1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:background="@color/title"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="hewkaw"
+            android:textColor="@color/text_w"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/style_button_test2"
+            android:text="เลือกวันที่"
+            android:textColor="@color/text_w" />
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/LV_thnaja_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

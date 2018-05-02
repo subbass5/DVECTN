@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ctn.example.user.dvectn"
-    android:targetSandboxVersion="1"
-    android:versionCode="1"
+    package="ctn.example.user.dvectn2"
+    android:targetSandboxVersion="2"
+    android:versionCode="2"
     android:versionName="CTN DVE"
     >
 
@@ -20,7 +20,7 @@
 
         >
 
-        <activity android:name="ctn.example.user.dvectn.MainActivity"
+        <activity android:name="ctn.example.user.dvectn2.MainActivity"
                   android:screenOrientation="portrait"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

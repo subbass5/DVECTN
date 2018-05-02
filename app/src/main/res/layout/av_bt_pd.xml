@@ -29,7 +29,7 @@
                 android:layout_marginTop="25dp"
                 android:textAlignment="center"
                 android:textColor="#FFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
 
             <TextView
@@ -39,7 +39,7 @@
                 android:text="ประเมินการปฎิบัติงาน"
                 android:textAlignment="center"
                 android:textColor="#FFF"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="53dp" />
         </LinearLayout>

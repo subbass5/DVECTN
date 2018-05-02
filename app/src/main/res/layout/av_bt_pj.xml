@@ -13,6 +13,23 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="แบบประเมินโครงการ"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/BTNN_1"
             android:layout_width="wrap_content"
@@ -20,7 +37,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/style_button_test"
             android:text="ตอนที่ 1"
             android:textColor="@color/text_w"

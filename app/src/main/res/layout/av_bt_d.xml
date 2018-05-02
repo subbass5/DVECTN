@@ -13,7 +13,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,20 +24,50 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="ครูฝึกสถานประกอบการ"
             android:textAlignment="center"
             android:textColor="#FFF"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="เช็คชื่อประจำวัน"
             android:textAlignment="center"
             android:textColor="#FFF"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/title"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_datetime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/text_w"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="hewkaw"/>
+
+        <Button
+            android:id="@+id/btnSelectDate2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/style_button_test2"
+            android:text="เลือกวันที่"
+            android:textColor="@color/text_w"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
     </LinearLayout>
     <ScrollView
