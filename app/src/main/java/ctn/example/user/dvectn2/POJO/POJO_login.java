@@ -27,6 +27,12 @@ public class POJO_login {
     @SerializedName("member_type")
     @Expose
     private String memberType;
+    @SerializedName("term_num")
+    @Expose
+    private String termNum;
+    @SerializedName("term_year")
+    @Expose
+    private String termYear;
 
     public String getMemberId() {
         return memberId;
@@ -74,6 +80,22 @@ public class POJO_login {
 
     public void setMemberType(String memberType) {
         this.memberType = memberType;
+    }
+
+    public String getTermNum() {
+        return termNum;
+    }
+
+    public void setTermNum(String termNum) {
+        this.termNum = termNum;
+    }
+
+    public String getTermYear() {
+        return termYear;
+    }
+
+    public void setTermYear(String termYear) {
+        this.termYear = termYear;
     }
 
 }

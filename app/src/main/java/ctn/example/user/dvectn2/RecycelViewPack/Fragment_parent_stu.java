@@ -44,6 +44,8 @@ public class Fragment_parent_stu extends Fragment {
     List<String> Data_Url;
     String userType = "";
     String dep_id = "";
+//    List<String> score;
+    String score;
     String member_id = "";
     int memberId = -0;
 
@@ -90,6 +92,7 @@ public class Fragment_parent_stu extends Fragment {
         Data_St = new ArrayList<>();
         Data_Url = new ArrayList<>();
 
+
         new NetworkConnectionManager().callServer_getdata_parent(onNetworkCallback_getdata_parent,memberId);
 
         return view;
@@ -102,6 +105,9 @@ public class Fragment_parent_stu extends Fragment {
             for (int i = 0; i< getdataprentmember.size() ;i++){
                     Data_St.add(getdataprentmember.get(i).getDetail());
                     Data_Url.add(getdataprentmember.get(i).getImg());
+                    score = getdataprentmember.get(i).getScore();
+
+
 
                 }
 
@@ -109,7 +115,7 @@ public class Fragment_parent_stu extends Fragment {
 
                 recycleViewAdapter = new RecycleViewAdapter1(getContext());
 
-                recycleViewAdapter.Load_data(Data_St,Data_Url,userType,""+memberId);
+                recycleViewAdapter.Load_data(Data_St,Data_Url,userType,""+memberId,score);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setAdapter(recycleViewAdapter);

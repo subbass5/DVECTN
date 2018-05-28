@@ -14,9 +14,13 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,8 +48,7 @@ public class Fragment_Student_Recycel extends Fragment {
     List<String> Data_Url;
     List<String> Data_score;
     List<String> app_id ;
-    TextView tv_name;
-    String frg_st;
+    TextView tv_uou;
     String userType = "";
     String dep_id = "";
     String member_id = "" ;
@@ -54,13 +57,19 @@ public class Fragment_Student_Recycel extends Fragment {
     SharedPreferences.Editor editor;
     SharedPreferences sharedPreferences;
     Context context;
-
+    private Boolean isFabOpen = false;
+//    private FloatingActionButton fab,fab1,fab2,fab_test;
+    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
     public  static  final String TAG_STU = "DENT";
+    private Button mButtonDialog;
+    FloatingActionButton fab_test,fab,fab1,fab2;
+    public Fragment_Student_Recycel() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View viewtt = inflater.inflate(R.layout.student_page, container, false);
+        final View viewtt = inflater.inflate(R.layout.student_page, container, false);
 
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
@@ -68,6 +77,8 @@ public class Fragment_Student_Recycel extends Fragment {
 
 //        tv_name = viewtt.findViewById(R.id.tv_name_naja);
 //        tv_name.setText(Da);
+
+
         context = getContext();
 
         sharedPreferences = getActivity().getSharedPreferences(Fragment_login.MyPer, Context.MODE_PRIVATE);
@@ -76,10 +87,29 @@ public class Fragment_Student_Recycel extends Fragment {
         dep_id = sharedPreferences.getString(Fragment_login.KEY_dep_id,null);
         userType = sharedPreferences.getString(Fragment_login.KEY_member_type,null);
 
-        FloatingActionButton fab = viewtt.findViewById(R.id.fab);
-        FloatingActionButton fab1 = viewtt.findViewById(R.id.fab12);
-        FloatingActionButton fab2 = viewtt.findViewById(R.id.fab_data);
+         fab_test = viewtt.findViewById(R.id.fab_test);
+         fab = viewtt.findViewById(R.id.fab);
+         fab1 = viewtt.findViewById(R.id.fab12);
+         fab2 = viewtt.findViewById(R.id.fab_data);
 
+
+
+
+        fab_open = AnimationUtils.loadAnimation(getContext(), R.anim.fab_open);
+        fab_close = AnimationUtils.loadAnimation(getContext(),R.anim.fab_close);
+        rotate_forward = AnimationUtils.loadAnimation(getContext(),R.anim.rotate_forward);
+        rotate_backward = AnimationUtils.loadAnimation(getContext(),R.anim.rotate_backward);
+
+
+        close_fab();
+
+
+        fab_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animateFAB(viewtt);
+            }
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,6 +194,42 @@ public class Fragment_Student_Recycel extends Fragment {
         return viewtt;
     }
 
+    public void close_fab (){
+        fab_test.startAnimation(rotate_backward);
+        fab.startAnimation(fab_close);
+        fab2.startAnimation(fab_close);
+        fab.setClickable(false);
+        fab2.setClickable(false);
+        isFabOpen = false;
+    }
+
+    public void open_fab (){
+        fab_test.startAnimation(rotate_forward);
+        fab.startAnimation(fab_open);
+        fab2.startAnimation(fab_open);
+        fab.setClickable(true);
+        fab2.setClickable(true);
+        isFabOpen = true;
+        Log.d("Raj","open");
+    }
+
+    public void animateFAB(View vieww){
+
+//        FloatingActionButton fab_test = vieww.findViewById(R.id.fab_test);
+//        FloatingActionButton fab = vieww.findViewById(R.id.fab);
+//        FloatingActionButton fab2 = vieww.findViewById(R.id.fab_data);
+
+        if(isFabOpen){
+
+            close_fab();
+
+        } else {
+
+            open_fab();
+
+        }
+    }
+
     OnNetworkCallback_Stu_naja onCallbackList = new OnNetworkCallback_Stu_naja() {
 
 
@@ -175,7 +241,9 @@ public class Fragment_Student_Recycel extends Fragment {
                   Data_Url.add(stu_naja.get(i).getImgurl());
                   app_id.add(stu_naja.get(i).getAppId());
 
+
             }
+
 
             recycleViewAdapter = new RecycleViewAdapter1(getContext());
 

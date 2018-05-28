@@ -37,6 +37,7 @@ public class RecycleViewAdapter1 extends RecyclerView.Adapter<RecycleViewAdapter
     List<String> nData;
     List<String> nUrl;
     List<String> app_id;
+    List<String> Score;
     String type = "";
     String member_id = "";
     String detail = "";
@@ -60,11 +61,12 @@ public class RecycleViewAdapter1 extends RecyclerView.Adapter<RecycleViewAdapter
 //        Toast.makeText(context0, ""+nData.size(), Toast.LENGTH_SHORT).show();
     }
 
-    public  void  Load_data (List<String> nData , List<String> nUrl ,String type , String member_id){
+    public  void  Load_data (List<String> nData , List<String> nUrl ,String type , String member_id ,String score){
         this.nData = nData;
         this.nUrl = nUrl;
         this.type = type;
         this.member_id = member_id;
+        this.score = score;
     }
 
 
@@ -208,6 +210,7 @@ public class RecycleViewAdapter1 extends RecyclerView.Adapter<RecycleViewAdapter
 
         final Spinner spinner = handleView.findViewById(R.id.spScore);
 
+//        Toast.makeText(context, ""+score, Toast.LENGTH_SHORT).show();
 
         if (type.equals("student") || type.equals("parent")) {
 
@@ -221,7 +224,7 @@ public class RecycleViewAdapter1 extends RecyclerView.Adapter<RecycleViewAdapter
         } else {
 
             spinner.setVisibility(View.VISIBLE);
-            tv_lbl_score.setVisibility(View.VISIBLE);
+
         }
         //D/Member Type: admin
         //D/Member Type: establishment
@@ -314,6 +317,7 @@ public class RecycleViewAdapter1 extends RecyclerView.Adapter<RecycleViewAdapter
 
             }
         });
+
 
        dialog =  builder.show();
     }

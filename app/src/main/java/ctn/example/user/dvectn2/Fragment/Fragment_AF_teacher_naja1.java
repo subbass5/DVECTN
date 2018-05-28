@@ -21,7 +21,7 @@ import ctn.example.user.dvectn2.R;
 
 public class Fragment_AF_teacher_naja1 extends Fragment {
 
-    String [] chataterNaJa ={ "ปวช","ปวส"};
+    String [] chataterNaJa ={ "ปวช","ปวส","ปวสม6"};
     Context context;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;

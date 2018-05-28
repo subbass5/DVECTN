@@ -14,4 +14,17 @@
     <color name="title">#ffb2b2</color>
     <color name="title2">#ffff</color>
     <color name="title3">#8f8f8f</color>
+
+    <color name="red">#ec4747</color>
+    <color name="green">#88f979</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="lightGrey">#c2c2c2</color>
+    <color name="lighterGrey">#fcfcfc</color>
+    <color name="grey">#a9a9a9</color>
+    <color name="blue">#54beff</color>
+
+    <color name="colorFAB1">#2196F3</color>
+    <color name="colorFAB2">#E040FB</color>
+
 </resources>

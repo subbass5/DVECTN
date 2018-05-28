@@ -274,7 +274,7 @@ public class RecycleViewAdapter2 extends RecyclerView.Adapter<RecycleViewAdapter
         }
 
         ArrayAdapter adt = new ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, DataSp);
-        int spinnerPosition = adt.getPosition(getStatusSPN(Integer.parseInt(score)));
+        int spinnerPosition = adt.getPosition(getStatus(score));
 //        Toast.makeText(context, " spinnerPosition = "+spinnerPosition, Toast.LENGTH_SHORT).show();
         spinner.setSelection(spinnerPosition);
 
@@ -330,7 +330,7 @@ public class RecycleViewAdapter2 extends RecyclerView.Adapter<RecycleViewAdapter
 
     }
 
-    private int getStatus(String input){
+    public int getStatus(String input){
 
         if(input.equals("-")){
             return 0;
@@ -346,7 +346,7 @@ public class RecycleViewAdapter2 extends RecyclerView.Adapter<RecycleViewAdapter
             return -1;
         }
     }
-    private String getStatusSPN(int input){
+    public String getStatusSPN(int input){
 
         if (input == 1){
             return "ต้องปรับปรุง";

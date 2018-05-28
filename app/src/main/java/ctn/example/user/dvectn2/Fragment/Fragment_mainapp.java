@@ -45,7 +45,6 @@ public class Fragment_mainapp extends Fragment implements View.OnClickListener {
 
         view.findViewById(R.id.BT_D).setOnClickListener(this);
         view.findViewById(R.id.BT_PD).setOnClickListener(this);
-//        view.findViewById(R.id.BT_AG).setOnClickListener(this);
         view.findViewById(R.id.BT_DD).setOnClickListener(this);
         view.findViewById(R.id.BT_PJ).setOnClickListener(this);
         view.findViewById(R.id.btn_logout1).setOnClickListener(this);
@@ -85,17 +84,11 @@ public class Fragment_mainapp extends Fragment implements View.OnClickListener {
                 Fragment_bt_d1 av_bt_d = new Fragment_bt_d1();
                 replaceFragment(av_bt_d, null);
                 break;
-//               getActivity().getSupportFragmentManager().beginTransaction().add(R.id.content,av_bt_ag,"name").commit();
             case R.id.BT_PD:
                 Fragment_AF_ELI_missdate av_bt_ag = new Fragment_AF_ELI_missdate();
                 replaceFragment(av_bt_ag, null);
-//                Fragment_bt_pd1 av_bt_pd = new Fragment_bt_pd1();
-//                replaceFragment(av_bt_pd, null);
+
                 break;
-//            case R.id.BT_AG:
-//                Fragment_bt_ag av_bt_ag = new Fragment_bt_ag();
-//                replaceFragment(av_bt_ag, null);
-//                break;
             case R.id.BT_DD:
                 Fragment_AF_dd af_dd_list = new Fragment_AF_dd();
                 replaceFragment(af_dd_list, null);

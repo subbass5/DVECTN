@@ -51,7 +51,6 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
     Context context;
 
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

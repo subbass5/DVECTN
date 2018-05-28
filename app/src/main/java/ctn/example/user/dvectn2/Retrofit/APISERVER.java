@@ -111,9 +111,9 @@ public interface APISERVER {
                                  @Field("ex64") int five, @Field("ex65") int six,
                                  @Field("ex66") int seven);
 
-    @FormUrlEncoded
-    @POST("getstu/")
-    Call<POJO_getstu> getDataPJP5(@Field("member_id") int first, @Field("score") String score);
+//    @FormUrlEncoded
+//    @POST("getstu/")
+//    Call<POJO_getstu> getDataPJP5(@Field("member_id") int first, @Field("score") String score);
 
 //    @FormUrlEncoded
 //    @POST("getdata-ebs/")

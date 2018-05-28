@@ -76,7 +76,6 @@ public class Student_save extends Fragment implements View.OnClickListener {
 
 
 
-
 //        Toast.makeText(context, ""+dep_id, Toast.LENGTH_SHORT).show();
         init(viewses);
 
