@@ -1,6 +1,6 @@
 package ctn.example.user.dvectn2.Retrofit;
 
-import ctn.example.user.dvectn2.POJO.ResPOJO;
+import ctn.example.user.dvectn2.Model.ResPOJO;
 import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 

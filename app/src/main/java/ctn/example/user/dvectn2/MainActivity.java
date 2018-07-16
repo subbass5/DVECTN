@@ -1,5 +1,6 @@
 package ctn.example.user.dvectn2;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import ctn.example.user.dvectn2.Fragment.Fragment_login;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,4 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
+
 }

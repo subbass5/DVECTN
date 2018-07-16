@@ -3,6 +3,8 @@ package ctn.example.user.dvectn2.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,15 +17,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
-import ctn.example.user.dvectn2.POJO.POJO_login;
+import ctn.example.user.dvectn2.Model.POJO_login;
 import ctn.example.user.dvectn2.R;
-import ctn.example.user.dvectn2.RecycelViewPack.Fragment_Student_Recycel;
-import ctn.example.user.dvectn2.RecycelViewPack.Fragment_parent_stu;
+import ctn.example.user.dvectn2.RecycelViewPack.FragmentMainStudent;
+import ctn.example.user.dvectn2.RecycelViewPack.FragmentParent;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallbackLoginListener;
 import okhttp3.ResponseBody;
+
+import static ctn.example.user.dvectn2.Util.MyFer.KEY_PWD;
+import static ctn.example.user.dvectn2.Util.MyFer.KEY_USR;
 
 /**
  * Created by User on 19/2/2561.
@@ -32,6 +38,7 @@ import okhttp3.ResponseBody;
 public class Fragment_login extends Fragment implements View.OnClickListener {
     EditText et_user,et_pass;
     String str_user,str_pass;
+    RadioButton rab_keep;
     public static String BASE_URL = "http://dve2.ctn-phrae.com/api/";
     public static final String MyPer = "myPer";
     public static final String KEY_member_id = "member_id";
@@ -59,7 +66,7 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
 
         view.findViewById(R.id.btn_login).setOnClickListener(this);
         context = getContext();
-
+        rab_keep = view.findViewById(R.id.rab_keep);
 
 
         et_user = view.findViewById(R.id.et_user);
@@ -69,6 +76,7 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
         sharedPreferences = getActivity().getSharedPreferences(MyPer, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
+//        hasNetworkConnection();
 
         img.setImageDrawable(getResources().getDrawable(R.drawable.logo2));
 
@@ -77,11 +85,46 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
         return view;
 
     }
+    public  void hasNetworkConnection() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getApplicationContext()
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+        if (networkInfo == null) {
+            Toast.makeText(getActivity().getApplicationContext(), "No internet !!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (networkInfo.getTypeName().equalsIgnoreCase("WIFI"))
+            if (networkInfo.isConnected())
+                Toast.makeText(getActivity().getApplicationContext(), "Mobile internet !!", Toast.LENGTH_SHORT).show();
+        if (networkInfo.getTypeName().equalsIgnoreCase("MOBILE"))
+            if (networkInfo.isConnected())
+                Toast.makeText(getActivity().getApplicationContext(), "Wifi internet !!", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        str_user = sharedPreferences.getString(KEY_USR,"");
+        str_pass = sharedPreferences.getString(KEY_PWD,"");
+
+        if(!str_user.isEmpty() && !str_pass.isEmpty()) {
+            showLoading();
+            new NetworkConnectionManager().callServerLogin(listener, str_user, str_pass);
+        }
+    }
 
     private void login(){
 
         str_user = et_user.getText().toString().trim();
         str_pass = et_pass.getText().toString().trim();
+
+        if (rab_keep.isChecked()){
+            editor.putString(KEY_USR,str_user);
+            editor.putString(KEY_PWD,str_pass);
+        }
 
 
      if (TextUtils.isEmpty(et_user.getText().toString().trim())|| TextUtils.isEmpty(et_pass.getText().toString().trim())){
@@ -98,10 +141,6 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
 
         }
 
-//        if (progressDialog.isShowing()) {
-//            progressDialog.dismiss();
-//            Toast.makeText(getContext(), "รหัสไม่ถูกต้อง", Toast.LENGTH_SHORT).show();
-//        }
     }
 
 
@@ -125,35 +164,35 @@ public class Fragment_login extends Fragment implements View.OnClickListener {
 
                     String Member_Type = loginRes.getMemberType();
 
-//                    Log.d("type user",""+Member_Type);
 
                     if (Member_Type.equals("establishment")) {
 
-                        Fragment_mainapp sec = new Fragment_mainapp();
+                        FragmentEstablishment sec = new FragmentEstablishment();
                         replaceFragment(sec, null);
 
                     } else if (Member_Type.equals("student")) {
 
-                        Fragment_Student_Recycel sec = new Fragment_Student_Recycel();
+                        FragmentMainStudent sec = new FragmentMainStudent();
                         replaceFragment(sec, null);
 
                     } else if (Member_Type.equals("teacher")) {
 
-                        Fragment_AF_Teacherlayout sec = new Fragment_AF_Teacherlayout();
+                        FragmentTeacher sec = new FragmentTeacher();
                         replaceFragment(sec, null);
 
 
                     } else if (Member_Type.equals("admin")) {
-                        Fragment_AF_teacher_naja1 sec = new Fragment_AF_teacher_naja1();
+                        FragmentAdminTeacher sec = new FragmentAdminTeacher();
                         replaceFragment(sec, null);
 
                     } else if (Member_Type.equals("parent")) {
-                        Fragment_parent_stu sec = new Fragment_parent_stu();
+                        FragmentParent sec = new FragmentParent();
                         replaceFragment(sec, null);
 
                     }
 
             }catch (Exception e){
+
                 Toast.makeText(context, "เข้าสู่ระบบ ล้มเหลว ", Toast.LENGTH_SHORT).show();
 
             }

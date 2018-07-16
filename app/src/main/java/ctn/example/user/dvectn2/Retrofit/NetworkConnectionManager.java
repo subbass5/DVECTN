@@ -8,36 +8,36 @@ import com.google.gson.GsonBuilder;
 import java.util.List;
 
 import ctn.example.user.dvectn2.Fragment.Fragment_login;
-import ctn.example.user.dvectn2.POJO.POJOGetDaily;
-import ctn.example.user.dvectn2.POJO.POJO_AF_teacher;
-import ctn.example.user.dvectn2.POJO.POJO_Checkdaily;
-import ctn.example.user.dvectn2.POJO.POJO_DD_P1;
-import ctn.example.user.dvectn2.POJO.POJO_DD_P2;
-import ctn.example.user.dvectn2.POJO.POJO_DD_P3;
-import ctn.example.user.dvectn2.POJO.POJO_Del;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P1;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P2;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P3;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P4;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P5;
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P6;
-import ctn.example.user.dvectn2.POJO.POJO_Stu_naja;
-import ctn.example.user.dvectn2.POJO.POJO_Stu_naja_gogo;
-import ctn.example.user.dvectn2.POJO.POJO_confirm_AG;
-import ctn.example.user.dvectn2.POJO.POJO_getdata_admin;
-import ctn.example.user.dvectn2.POJO.POJO_getdata_parent_member;
-import ctn.example.user.dvectn2.POJO.POJO_getdate_admin;
-import ctn.example.user.dvectn2.POJO.POJO_getdate_eil;
-import ctn.example.user.dvectn2.POJO.POJO_getstu;
-import ctn.example.user.dvectn2.POJO.POJO_getstuemp;
-import ctn.example.user.dvectn2.POJO.POJO_login;
-import ctn.example.user.dvectn2.POJO.POJO_row_teacher;
-import ctn.example.user.dvectn2.POJO.POJO_save_AG;
-import ctn.example.user.dvectn2.POJO.POJO_save_data_trainer;
-import ctn.example.user.dvectn2.POJO.POJO_test1_in_ag;
-import ctn.example.user.dvectn2.POJO.POJO_trainer;
-import ctn.example.user.dvectn2.POJO.POJO_trainer2;
-import ctn.example.user.dvectn2.POJO.ResPOJO;
+import ctn.example.user.dvectn2.Model.POJOGetDaily;
+import ctn.example.user.dvectn2.Model.POJO_AF_teacher;
+import ctn.example.user.dvectn2.Model.POJO_Checkdaily;
+import ctn.example.user.dvectn2.Model.POJO_DD_P1;
+import ctn.example.user.dvectn2.Model.POJO_DD_P2;
+import ctn.example.user.dvectn2.Model.POJO_DD_P3;
+import ctn.example.user.dvectn2.Model.POJO_Del;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P1;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P2;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P3;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P4;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P5;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P6;
+import ctn.example.user.dvectn2.Model.POJO_Stu_naja;
+import ctn.example.user.dvectn2.Model.POJO_Stu_naja_gogo;
+import ctn.example.user.dvectn2.Model.POJO_confirm_AG;
+import ctn.example.user.dvectn2.Model.POJO_getdata_admin;
+import ctn.example.user.dvectn2.Model.POJO_getdata_parent_member;
+import ctn.example.user.dvectn2.Model.POJO_getdate_admin;
+import ctn.example.user.dvectn2.Model.POJO_getdate_eil;
+import ctn.example.user.dvectn2.Model.POJO_getstu;
+import ctn.example.user.dvectn2.Model.POJO_getstuemp;
+import ctn.example.user.dvectn2.Model.POJO_login;
+import ctn.example.user.dvectn2.Model.POJO_row_teacher;
+import ctn.example.user.dvectn2.Model.POJO_save_AG;
+import ctn.example.user.dvectn2.Model.POJO_save_data_trainer;
+import ctn.example.user.dvectn2.Model.POJO_test1_in_ag;
+import ctn.example.user.dvectn2.Model.POJO_trainer;
+import ctn.example.user.dvectn2.Model.POJO_trainer2;
+import ctn.example.user.dvectn2.Model.ResPOJO;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -239,7 +239,7 @@ public class NetworkConnectionManager {
 
 
     // get data std
-    public void getDataStdDaily(final OnNetworkCallback_GetStdDaily listener, String depid , String date) {
+    public void     getDataStdDaily(final OnNetworkCallback_GetStdDaily listener, String depid , String date) {
 
         Gson gson = new GsonBuilder()
                 .setLenient()

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ctn.example.user.dvectn2.Fragment.Fragment_login;
-import ctn.example.user.dvectn2.POJO.POJO_AF_teacher;
+import ctn.example.user.dvectn2.Model.POJO_AF_teacher;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_AF_teacher;

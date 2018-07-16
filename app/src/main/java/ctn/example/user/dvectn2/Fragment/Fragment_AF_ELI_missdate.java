@@ -21,9 +21,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getdate_eil;
+import ctn.example.user.dvectn2.Model.POJO_getdate_eil;
 import ctn.example.user.dvectn2.R;
-import ctn.example.user.dvectn2.RecycelViewPack.Fragment_Teacher_Trainer;
 import ctn.example.user.dvectn2.RecycelViewPack.Fragment_bt_ag;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_getdate_eil;
@@ -86,7 +85,7 @@ public class Fragment_AF_ELI_missdate extends Fragment {
                     editor.putString(KEY_timeing,"no");
                     editor.commit();
 
-                    Fragment_mainapp faggotkub = new Fragment_mainapp();
+                    FragmentEstablishment faggotkub = new FragmentEstablishment();
                     replaceFragment(faggotkub, null);
 
 

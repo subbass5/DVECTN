@@ -1,6 +1,6 @@
 package ctn.example.user.dvectn2.Retrofit;
 
-import ctn.example.user.dvectn2.POJO.POJO_Checkdaily;
+import ctn.example.user.dvectn2.Model.POJO_Checkdaily;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_Checkdaily_D1 {

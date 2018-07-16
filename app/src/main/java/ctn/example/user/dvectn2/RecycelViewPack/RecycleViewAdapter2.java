@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +19,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_save_AG;
-import ctn.example.user.dvectn2.POJO.POJO_save_data_trainer;
+import ctn.example.user.dvectn2.Model.POJO_save_AG;
+import ctn.example.user.dvectn2.Model.POJO_save_data_trainer;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_save_AG;

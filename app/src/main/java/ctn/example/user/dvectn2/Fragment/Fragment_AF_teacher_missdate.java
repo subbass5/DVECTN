@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getdate_admin;
+import ctn.example.user.dvectn2.Model.POJO_getdate_admin;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.RecycelViewPack.Fragment_Teacher_Trainer;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
@@ -36,6 +36,7 @@ public class Fragment_AF_teacher_missdate extends Fragment {
     List<String> list_date;
     String dep_id = "";
     public static final String KEY_time = "time";
+    FragmentManager fragmentManager;
 
     @Nullable
     @Override
@@ -53,7 +54,7 @@ public class Fragment_AF_teacher_missdate extends Fragment {
         dep_id = sharedPreferences.getString(Fragment_login.KEY_dep_id,"");
 
         list_date = new ArrayList<>();
-
+        fragmentManager = getActivity().getSupportFragmentManager();
         String time = sharedPreferences.getString(KEY_time,"");
 
         if(time.equals("no")){
@@ -67,6 +68,14 @@ public class Fragment_AF_teacher_missdate extends Fragment {
 
         }else
             new NetworkConnectionManager().callServer_getdate_admin(onNetworkCallback_gettdate_admin,dep_id);
+
+        FloatingActionButton fab_back = view.findViewById(R.id.fab_back);
+        fab_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.popBackStack();
+            }
+        });
 
         return view;
     }

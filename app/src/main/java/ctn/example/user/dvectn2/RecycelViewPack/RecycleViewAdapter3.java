@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_Checkdaily;
+import ctn.example.user.dvectn2.Model.POJO_Checkdaily;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_Checkdaily_D1;
 import okhttp3.ResponseBody;

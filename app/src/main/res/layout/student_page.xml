@@ -47,6 +47,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/LV_st_1"
+        android:background="#ccc"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,71 +60,70 @@
 
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/fab_add_working"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@color/bootstrap_brand_warning"
         android:src="@drawable/ic_add_black_24dp"
 
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.974"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.835" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_data"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/fab_evaluation"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@color/bootstrap_brand_info"
         android:src="@drawable/ic_event_available_black_24dp"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.974"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab12"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/fab_logout"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
+        android:backgroundTint="@color/bootstrap_brand_danger"
         android:src="@drawable/ic_out"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintVertical_bias="0.56" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_test"
+        android:id="@+id/fab_main_menu"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="end|bottom"
         android:layout_marginStart="90dp"
+        android:backgroundTint="@color/colorPrimary"
         android:src="@drawable/ic_add_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964" />

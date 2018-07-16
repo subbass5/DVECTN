@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_row_teacher;
+import ctn.example.user.dvectn2.Model.POJO_row_teacher;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_row_teacher;
 import okhttp3.ResponseBody;

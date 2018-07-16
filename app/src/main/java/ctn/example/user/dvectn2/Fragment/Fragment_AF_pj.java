@@ -17,7 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import ctn.example.user.dvectn2.POJO.POJO_getstu;
+import ctn.example.user.dvectn2.Model.POJO_getstu;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallBackGetStd;

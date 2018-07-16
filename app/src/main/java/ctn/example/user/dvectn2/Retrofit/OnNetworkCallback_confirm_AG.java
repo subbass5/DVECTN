@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_confirm_AG;
+import ctn.example.user.dvectn2.Model.POJO_confirm_AG;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_confirm_AG {

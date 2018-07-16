@@ -1,180 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/text_w"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:background="@color/colorPrimary"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
-
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="80dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="start"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btn_logout1"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/style_logout_semicircle"
-                    android:text="Logout"
-                    android:textColor="@color/text_w" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="start"
+                android:gravity="center"
                 android:orientation="vertical">
 
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="DVE by CTN Phrae"
-                    android:textAlignment="viewEnd"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
                     android:textColor="#FFF"
-                    android:textSize="20sp" />
+                    android:textSize="24sp" />
 
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
+                    android:textStyle="bold"
                     android:text="ครูฝึกสถานประกอบการ"
-                    android:textAlignment="viewEnd"
+                    android:textAlignment="textStart"
                     android:textColor="#FFF"
                     android:textSize="19sp" />
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="40dp"
-                android:layout_height="match_parent"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/BT_D"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+
+                android:background="@drawable/style_mainn"
+                android:onClick="start"
+                android:text="เช็คชื่อประจำวัน"
+                android:textColor="@color/text_w"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <Button
+                android:id="@+id/BT_PD"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/style_mainn"
+                android:layout_gravity="center"
+                android:text="ประเมินปฏิบัติงาน"
+                android:textColor="@color/text_w"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BT_D" />
+
+
+            <Button
+                android:id="@+id/BT_DD"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/style_mainn"
+                android:layout_gravity="center"
+                android:text="ประเมินจิตพิสัย"
+                android:textColor="@color/text_w"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BT_AG" />
+
+            <Button
+                android:id="@+id/BT_PJ"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/style_mainn"
+                android:layout_gravity="center"
+                android:text="ประเมินโครงการ"
+                android:textColor="@color/text_w"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BT_DD" />
 
         </LinearLayout>
 
-        <!--<TextView-->
-        <!--android:id="@+id/TV_1"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="ครูฝึกสถานประกอบการ"-->
-        <!--android:textColor="@android:color/black"-->
-        <!--android:textSize="30sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.13" />-->
-
-        <Button
-            android:id="@+id/BT_D"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
-
-            android:background="@drawable/style_mainn"
-            android:onClick="start"
-            android:text="เช็คชื่อประจำวัน"
-            android:textColor="@color/text_w"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-        <Button
-            android:id="@+id/BT_PD"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/style_mainn"
-
-            android:text="ประเมินปฏิบัติงาน"
-            android:textColor="@color/text_w"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BT_D" />
-
-        <!--<Button-->
-            <!--android:id="@+id/BT_AG"-->
-            <!--android:layout_width="300dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="24dp"-->
-            <!--android:background="@drawable/style_mainn"-->
-
-            <!--android:text="ยืนยันปฏิบัติงาน"-->
-            <!--android:textColor="@color/text_w"-->
-            <!--android:textSize="18sp"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintHorizontal_bias="0.502"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/BT_PD" />-->
-
-        <Button
-            android:id="@+id/BT_DD"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/style_mainn"
-
-            android:text="ประเมินจิตพิสัย"
-            android:textColor="@color/text_w"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BT_AG" />
-
-        <Button
-            android:id="@+id/BT_PJ"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/style_mainn"
-
-            android:text="ประเมินโครงการ"
-            android:textColor="@color/text_w"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BT_DD" />
-
-
-
 
     </LinearLayout>
-</ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_logout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="90dp"
+        android:backgroundTint="@color/bootstrap_brand_warning"
+        android:src="@drawable/ic_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
+
+</android.support.constraint.ConstraintLayout>

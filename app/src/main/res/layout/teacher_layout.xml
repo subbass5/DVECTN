@@ -21,19 +21,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="DVE by CTN Phrae"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="#FFF"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="ครูนิเทศ"
             android:textAlignment="center"
             android:textColor="#FFF"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
     </LinearLayout>
 

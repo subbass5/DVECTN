@@ -18,7 +18,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P1;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P1;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_PJ_P1;

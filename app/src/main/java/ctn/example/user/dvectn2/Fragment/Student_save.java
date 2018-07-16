@@ -35,7 +35,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.ResPOJO;
+import ctn.example.user.dvectn2.Model.ResPOJO;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallbackListener;

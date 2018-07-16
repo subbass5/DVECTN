@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJOGetDaily;
+import ctn.example.user.dvectn2.Model.POJOGetDaily;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_GetStdDaily {

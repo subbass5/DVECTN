@@ -2,7 +2,6 @@ package ctn.example.user.dvectn2.RecycelViewPack;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -21,7 +19,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_Del;
+import ctn.example.user.dvectn2.Model.POJO_Del;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_Del_data;

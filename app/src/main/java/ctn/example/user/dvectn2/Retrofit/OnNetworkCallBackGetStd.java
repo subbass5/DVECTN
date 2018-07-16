@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getstu;
+import ctn.example.user.dvectn2.Model.POJO_getstu;
 import okhttp3.ResponseBody;
 
 /**

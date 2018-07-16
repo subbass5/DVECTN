@@ -29,9 +29,8 @@ import java.util.List;
 import java.util.Locale;
 
 import ctn.example.user.dvectn2.Fragment.Fragment_AF_ELI_missdate;
-import ctn.example.user.dvectn2.Fragment.Fragment_bt_pj_1_EIL;
 import ctn.example.user.dvectn2.Fragment.Fragment_login;
-import ctn.example.user.dvectn2.POJO.POJO_confirm_AG;
+import ctn.example.user.dvectn2.Model.POJO_confirm_AG;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_confirm_AG;

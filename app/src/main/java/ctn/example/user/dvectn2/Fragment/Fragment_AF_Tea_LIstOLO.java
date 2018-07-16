@@ -2,14 +2,13 @@ package ctn.example.user.dvectn2.Fragment;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getdata_admin;
+import ctn.example.user.dvectn2.Model.POJO_getdata_admin;
+import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_getdata_admin;
 import okhttp3.ResponseBody;
@@ -41,6 +41,7 @@ public class Fragment_AF_Tea_LIstOLO extends Fragment {
     String type = "";
     int ClassOfStudent = -1;
     String TAG = "<Fragment_AF_Tea_LIstOLO>";
+    FragmentManager fragmentManager;
 
     @Nullable
     @Override
@@ -61,9 +62,18 @@ public class Fragment_AF_Tea_LIstOLO extends Fragment {
 
         editor.putString(Fragment_AF_teacher_missdate.KEY_time,"yes");
         editor.commit();
+        fragmentManager = getActivity().getSupportFragmentManager();
 
         dep_id = sharedPreferences.getString(Fragment_login.KEY_dep_id,null);
         type = sharedPreferences.getString(Fragment_login.KEY_ClassOfTeachernaja,null);
+
+        FloatingActionButton fab_back = v4.findViewById(R.id.fab_back);
+        fab_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.popBackStack();
+            }
+        });
 
         getStd();
 

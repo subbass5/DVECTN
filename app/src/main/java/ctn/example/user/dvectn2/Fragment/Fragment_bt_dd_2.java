@@ -16,7 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import ctn.example.user.dvectn2.POJO.POJO_DD_P2;
+import ctn.example.user.dvectn2.Model.POJO_DD_P2;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_DD_P2;

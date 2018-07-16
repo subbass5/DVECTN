@@ -2,8 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getdata_admin;
-import ctn.example.user.dvectn2.POJO.POJO_getdate_admin;
+import ctn.example.user.dvectn2.Model.POJO_getdate_admin;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_getdate_admin {

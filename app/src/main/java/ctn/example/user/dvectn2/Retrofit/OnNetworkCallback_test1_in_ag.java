@@ -1,6 +1,6 @@
 package ctn.example.user.dvectn2.Retrofit;
 
-import ctn.example.user.dvectn2.POJO.POJO_test1_in_ag;
+import ctn.example.user.dvectn2.Model.POJO_test1_in_ag;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_test1_in_ag {

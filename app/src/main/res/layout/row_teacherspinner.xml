@@ -27,7 +27,7 @@
 
             <Spinner
                 android:id="@+id/spinner_te1"
-                android:layout_width="75dp"
+                android:layout_width="100dp"
                 android:layout_marginStart="20dp"
                 android:layout_height="20dp"/>
 

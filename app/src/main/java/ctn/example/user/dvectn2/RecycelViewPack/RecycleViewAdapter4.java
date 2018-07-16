@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_Checkdaily;
+import ctn.example.user.dvectn2.Model.POJO_Checkdaily;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_Checkdaily_D1;

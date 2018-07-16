@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getdate_eil;
+import ctn.example.user.dvectn2.Model.POJO_getdate_eil;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_getdate_eil {

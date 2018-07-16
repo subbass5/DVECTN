@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_AF_teacher;
+import ctn.example.user.dvectn2.Model.POJO_AF_teacher;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.RecycelViewPack.Fragment_Teacher_Recycle;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
@@ -54,8 +54,6 @@ public class Fragment_AF_Teacherlayout2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v4 =inflater.inflate(R.layout.af_teacher_layout,container,false);
-
-
 
         listView = v4.findViewById(R.id.list_af_th);
         nameStd = new ArrayList<>();

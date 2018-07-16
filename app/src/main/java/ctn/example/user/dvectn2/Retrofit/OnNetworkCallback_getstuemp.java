@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_getstuemp;
+import ctn.example.user.dvectn2.Model.POJO_getstuemp;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_getstuemp {

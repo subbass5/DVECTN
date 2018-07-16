@@ -1,6 +1,6 @@
 package ctn.example.user.dvectn2.Retrofit;
 
-import ctn.example.user.dvectn2.POJO.POJO_login;
+import ctn.example.user.dvectn2.Model.POJO_login;
 import okhttp3.ResponseBody;
 
 /**

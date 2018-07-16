@@ -2,7 +2,7 @@ package ctn.example.user.dvectn2.Retrofit;
 
 import java.util.List;
 
-import ctn.example.user.dvectn2.POJO.POJO_trainer2;
+import ctn.example.user.dvectn2.Model.POJO_trainer2;
 import okhttp3.ResponseBody;
 
 public interface OnNetworkCallback_trainer2 {

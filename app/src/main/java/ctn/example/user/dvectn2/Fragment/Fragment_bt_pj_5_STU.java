@@ -16,7 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import ctn.example.user.dvectn2.POJO.POJO_PJ_P5;
+import ctn.example.user.dvectn2.Model.POJO_PJ_P5;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_PJ_P5;
 import okhttp3.ResponseBody;

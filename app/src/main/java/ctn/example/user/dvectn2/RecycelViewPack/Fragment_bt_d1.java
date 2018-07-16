@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Locale;
 
 import ctn.example.user.dvectn2.Fragment.Fragment_login;
-import ctn.example.user.dvectn2.POJO.POJOGetDaily;
+import ctn.example.user.dvectn2.Model.POJOGetDaily;
 import ctn.example.user.dvectn2.R;
 import ctn.example.user.dvectn2.Retrofit.NetworkConnectionManager;
 import ctn.example.user.dvectn2.Retrofit.OnNetworkCallback_GetStdDaily;
